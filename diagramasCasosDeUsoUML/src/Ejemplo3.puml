@@ -1,0 +1,15 @@
+@startuml
+skinparam BackgroundColor yellow
+left to right direction
+actor Bibliotecario as biblio #yellow;Line:Red
+usecase "Baja Socio" as baja #yellow;line:red
+usecase "Buscar Socio" as buscar #yellow;line:red
+usecase vacio as vac #yellow;Line:yellow;Text:yellow
+usecase vacio as vac1 #yellow;Line:yellow;Text:yellow
+
+
+biblio --> baja#line:red
+baja ..> buscar#line:red :<<include>>
+baja--vac#line:yellow;
+baja--vac1#line:yellow;
+@enduml

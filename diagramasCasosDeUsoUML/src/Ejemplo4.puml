@@ -1,0 +1,8 @@
+@startuml
+skinparam BackgroundColor yellow
+actor Agente as ag #yellow;Line:Red
+usecase "Evaluar Solicitud de Crédito" as evsc #yellow;Line:Red
+usecase "Solicitar Informacion adicional al cliente" as sol #yellow;Line:Red
+ag -right-> evsc #Line:red
+sol .left.> evsc #Line:red : <<extend>>
+@enduml

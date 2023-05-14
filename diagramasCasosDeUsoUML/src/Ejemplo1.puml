@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+skinparam usecase{
+BackgroundColor White
+FileFontColor Red
+}
+
+actor Actor as ac#text:red
+actor Actor as ac2#text:red
+
+rectangle Sistema as rec#text:red{
+usecase "Caso de uso" as caso1#text:red
+usecase "Caso de uso" as caso2#text:red
+usecase "Caso de uso3" as caso3#text:red
+}
+
+caso1 -up- ac
+caso2 -up- ac
+caso3 -up- ac
+
+caso1 -down- ac2
+caso3 -down- ac2
+
+
+@enduml

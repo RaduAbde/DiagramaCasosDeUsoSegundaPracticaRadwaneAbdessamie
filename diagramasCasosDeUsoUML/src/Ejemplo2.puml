@@ -1,0 +1,24 @@
+
+@startuml
+skinparam BackgroundColor yellow
+skinparam usecase{
+Handwritten true
+BackgroundColor White
+}
+left to right direction
+actor Socio as sc
+actor Bibliotecario as bib
+
+rectangle Biblioteca as bibl #White{
+usecase "Reservar Libro" as rl
+usecase "Prestar Libro" as pl
+usecase "Devolver Libro" as dl
+usecase "Actualizar Catálogo" as act
+}
+
+sc -down- rl
+sc -down- pl
+bib -up- pl
+sc -left- dl
+bib -up- act
+@enduml

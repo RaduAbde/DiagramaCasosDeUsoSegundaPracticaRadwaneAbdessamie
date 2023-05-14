@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+
+skinparam Linetype polyline
+
+skinparam usecase{
+BackgroundColor White
+}
+
+actor Empleado as em #white
+(Alta Cliente) as ac
+(Introducir \n pedido) as ip
+(Obtener \n Estado \n Pedido)  as obp
+(Buscar \n Pedido) as bp
+(Cancelar \n Pedido) as cp
+(Buscar \n Cliente) as bc
+(Pago en \n cuenta) as pec
+(Pago con \ tarjeta) as pct
+em -- ac
+em -- ip
+em -- obp
+em -- bp
+em -- cp
+ac ..> ip : extiende
+ip ..> bc : incluye
+obp ..> bp : incluye
+cp ..> bp : incluye
+ip <.. pec : extiende
+ip <.. pct : extiende
+
+@enduml

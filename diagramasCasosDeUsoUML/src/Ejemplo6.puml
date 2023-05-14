@@ -1,0 +1,20 @@
+@startuml
+actor "Cliente Bancario" as cb #white
+actor "Cliente Normal" as cn #white
+actor "Cliente Corporativo" as cc #white
+
+
+rectangle "Actor antecesor" as aa #yellow;Text:red{
+}
+
+rectangle "Actor descendiente" as ad #yellow;Text:red{
+}
+
+
+cn -up-|> cb
+cc -up-|> cb
+
+aa -left-> cb #red
+ad -right-> cn #red
+
+@enduml

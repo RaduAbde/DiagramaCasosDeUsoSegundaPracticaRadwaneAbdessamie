@@ -1,0 +1,11 @@
+@startuml
+skinparam BackgroundColor yellow
+actor Agente as ag #yellow;Line:Red
+usecase "Enviar Solicitud de Crédito" as evsc #yellow;Line:Red
+usecase "Enviar Solicitud de Crédito personal" as evscp #yellow;Line:Red
+usecase "Enviar Solicitud de Crédito empresarial" as evscm #yellow;Line:Red
+
+ag -right-> evsc #Line:Red
+evscp -up-|> evsc #Line:Red
+evscm -up-|> evsc #Line:Red
+@enduml

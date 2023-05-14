@@ -1,0 +1,31 @@
+@startuml
+
+left to right direction
+actor Empleado as em #white
+actor Administrador as ad #white
+
+rectangle "Empresa pedidos" as ep #white{
+(Introducir\n Pedido) #white
+(Cancelar\n Pedido) #white
+(Obtener Estado\n Pedido) #white
+(Borrar Pedido) #white
+(Buscar Pedidos) #white
+(Introducir\n Pedido) #white
+(Alta Cliente) #white
+(Buscar Cliente) #white
+(Nuevo\n Producto) #white
+(Borrar Producto) #white
+}
+
+em -down- (Introducir\n Pedido)
+em -down- (Cancelar\n Pedido)
+em -down- (Obtener Estado\n Pedido)
+em -down- (Borrar Pedido)
+em -down- (Buscar Pedidos)
+em -down- (Alta Cliente)
+em -down- (Buscar Cliente)
+ad -up- (Nuevo\n Producto)
+ad -up- (Borrar Producto)
+
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+
+actor Empleado as em #white
+actor Administrador as ad #white
+
+rectangle "Empresa pedidos" as ep #white
+
+em -right- ep
+ad -left- ep
+
+
+@enduml
